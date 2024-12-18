@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         github: "GitHub",
         instagram: "인스타그램",
         player: "재생",
+        oldsite: "리뉴얼전 페이지로 돌아가기",
       },
       en: {
         home: "Home",
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         github: "GitHub",
         instagram: "Instagram",
         player: "Play",
+        oldsite: "Return to the Previous Page",
       },
       ja: {
         home: "ホーム",
@@ -67,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         github: "GitHub",
         instagram: "Instagram",
         player: "音楽をプレイ",
+        oldsite: "リニューアル前のページに戻る",
       },
     };
 
@@ -123,7 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const key = item.dataset.id;
       if (currentLinks[key]) {
         item.dataset.title = currentLinks[key];
-        if (item.classList.contains("navTabLink")) item.textContent = currentLinks[key];
+        if (item.classList.contains("navTabLink") || item.dataset.id === "oldsite")
+          item.textContent = currentLinks[key];
         document.documentElement.style.setProperty(`--${key}-title`, `"${currentLinks[key]}"`);
       }
     });

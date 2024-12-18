@@ -180,13 +180,21 @@ body {
   gap: 1rem;
 }
 
-#home .mailtoLink,
-#home .mailtoLink:active,
-#home .mailtoLink:visited {
+#home a,
+#home a:active,
+#home a:visited {
   display: inline-block;
-  margin-top: 2rem;
   color: var(--primary-text);
   text-decoration: underline;
+}
+
+#home .returnOldSite {
+  margin-top: 2rem;
+  font-weight: 800;
+}
+
+#home .mailtoLink {
+  margin-top: 1rem;
 }
 
 #home .social-link .rounded-link {
