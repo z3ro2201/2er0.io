@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteVer = "SEASON 3";
   document.getElementById("siteVer").textContent = siteVer;
 
+  const mobileMenuButton = document.getElementById("topNavBar_mobileButton");
   const allNavLinks = document.querySelectorAll(".navTabLink");
   const home = document.getElementById("home");
   const profile = document.getElementById("profile");
@@ -176,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       profile.style.transform = "translateX(0)";
       topNavBar.style.transform = "translateX(0)";
       topNavBar.classList.add("active");
+      mobileMenuButton.classList.add("active");
 
       allNavLinks.forEach((item) => {
         item.classList.remove("active");
@@ -192,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
       profile.style.transform = "translateX(100%)";
       topNavBar.style.transform = "translateX(100%)";
       topNavBar.classList.remove("active");
+      mobileMenuButton.classList.remove("active");
 
       if (topNavBar.dataset.mobile === "true") {
         topNavBar.dataset.mobile = "false";
@@ -222,10 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (target.id === "topNavBar_mobileButton") {
-      const mobileMenuButton = document.getElementById("topNavBar_mobileButton");
       const mobileMenu = document.getElementById("topNavBar");
       mobileMenu.classList.toggle("active");
-      console.log(mobileMenu.dataset.mobile);
+
       if (mobileMenu.dataset.mobile === "true") {
         mobileMenu.dataset.mobile = "false";
       } else {

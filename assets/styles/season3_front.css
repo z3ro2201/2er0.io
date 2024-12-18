@@ -254,8 +254,10 @@ body {
     height: 100%;
     overflow: hidden;
   }
-
   #topNavBar_mobileButton {
+    display: none;
+  }
+  #topNavBar_mobileButton.active {
     position: absolute;
     top: 1rem;
     right: 1rem;
