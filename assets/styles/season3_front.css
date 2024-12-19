@@ -139,6 +139,10 @@ body {
   transform: translateX(100%);
 }
 
+.d-none {
+  display: none !important;
+}
+
 #profile .profile-box {
   width: 24rem;
   padding: 1rem;
@@ -147,7 +151,7 @@ body {
   background-color: rgba(56, 170, 61, 0.05);
   line-height: 2;
   background-image: url(/assets/images/profile-bg.webp);
-  background-position: right 1rem 1rem; 
+  background-position: right 1rem top 1rem;
   background-repeat: no-repeat;
   background-size: 75px;
 }
@@ -244,9 +248,10 @@ body {
 }
 
 #youtube-player {
+  position: absolute;
   display: none;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
 }
 
 @media screen and (max-width: 780px) {

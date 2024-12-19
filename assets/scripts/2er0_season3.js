@@ -177,9 +177,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 프로필로 이동
     if (id === "simpleProfile") {
-      home.style.transform = "translateX(-100%)";
-      profile.style.transform = "translateX(0)";
-      topNavBar.style.transform = "translateX(0)";
+      profile.classList.remove("d-none");
+      setTimeout(() => {
+        home.style.transform = "translateX(-100%)";
+        profile.style.transform = "translateX(0)";
+        topNavBar.style.transform = "translateX(0)";
+        home.classList.add("d-none");
+      }, 100);
       topNavBar.classList.add("active");
       mobileMenuButton.classList.add("active");
 
@@ -194,10 +198,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 홈으로 돌아가기
     else if (id === "home") {
-      home.style.transform = "translateX(0)";
-      profile.style.transform = "translateX(100%)";
-      topNavBar.style.transform = "translateX(100%)";
-      topNavBar.classList.remove("active");
+      profile.classList.add("d-none");
+      setTimeout(() => {
+        home.style.transform = "translateX(0)";
+        profile.style.transform = "translateX(100%)";
+        topNavBar.style.transform = "translateX(100%)";
+        topNavBar.classList.remove("active");
+        home.classList.remove("d-none");
+      }, 100);
       mobileMenuButton.classList.remove("active");
 
       if (topNavBar.dataset.mobile === "true") {
