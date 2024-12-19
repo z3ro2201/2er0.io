@@ -147,8 +147,7 @@ body {
   background-color: rgba(56, 170, 61, 0.05);
   line-height: 2;
   background-image: url(/assets/images/profile-bg.webp);
-  background-position-x: right 1rem;
-  background-position-y: 1rem;
+  background-position: right 1rem 1rem; 
   background-repeat: no-repeat;
   background-size: 75px;
 }
